@@ -4,8 +4,8 @@ $(document).ready(function(){
         event.preventDefault();
         var name=$("#name").val();
         var email=$("#email").val();
-        var subject=$("subject").val();
-        var message=$("message").val();
+        var subject=$("#subject").val();
+        var message=$("#message").val();
     
         $.post("contactForm/contactform.php",{
             name: name,
@@ -18,13 +18,13 @@ $(document).ready(function(){
                 $("#error").removeClass('show');
                 $("#success").addClass('show');
                 $("#success").removeClass('d-none');
-                $("#success").append('Se han recibido los datos de forma satisfactoria');
+                $("#success").html('Se han recibido los datos de forma satisfactoria');
             } else {
                 $("#success").addClass('d-none');
                 $("#success").removeClass('show');
                 $("#error").removeClass('d-none');
                 $("#error").addClass('show');
-                $("#error").append(answer);
+                $("#error").html(answer);
             }
             
         });
