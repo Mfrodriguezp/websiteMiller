@@ -23,7 +23,7 @@ if (isset($_POST)) {
     $message = filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     if (strlen($name) <= 3 || $name = '') {
-        die("El campo <strong> Nombre<strong> tiene menos de 3 caracteres o se encuentra vacío");
+        die("El campo <strong> Nombre</strong> tiene menos de 3 caracteres o se encuentra vacío");
     }
     if (!($email)) {
         die("Introduzca un correo válido");
