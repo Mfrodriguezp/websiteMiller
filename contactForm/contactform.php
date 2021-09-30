@@ -17,10 +17,10 @@ if (!isset($contact_email_from)) {
 }
 
 if (isset($_POST)) {
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $message = filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
     if (strlen($name) <= 3 || $name = '') {
         die("El campo <strong> Nombre</strong> tiene menos de 3 caracteres o se encuentra vacío");
