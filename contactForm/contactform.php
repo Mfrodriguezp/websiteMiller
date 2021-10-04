@@ -13,29 +13,30 @@ if (!$contact_email_to || $contact_email_to == 'contact@example.com') {
     die('The contact form receiving email address is not configured!');
 }
 if (!isset($contact_email_from)) {
-    $contact_email_from = "contactform@" . @preg_replace('/^www\./', '', $_SERVER['SERVER_NAME']);
+    $contact_email_from = "contacto@" . @preg_replace('/^www\./', '', $_SERVER['SERVER_NAME']);
 }
+
+
 
 if (isset($_POST)) {
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
     $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-
-    if (strlen($name) <= 3 || $name = '') {
+    if (strlen($name) <= 3) {
         die("El campo <strong> Nombre</strong> tiene menos de 3 caracteres o se encuentra vacío");
     }
     if (!($email)) {
         die("Introduzca un correo válido");
     }
-    if (strlen($subject) < 3 || $subject = '') {
+    if (strlen($subject) < 3) {
         die("El campo <strong>Asunto</strong> tiene menos de 3 caracteres o se encuentra vacío");
     }
-    if (strlen($message) < 3 || $message = '') {
+    if (strlen($message) < 3) {
         die("El campo <strong>Mensaje</strong> tiene menos de 3 caracteres se encuentra vacío");
     }
 
-    $headers = 'From: ' . $name . ' <' . $contact_email_from . '>' . PHP_EOL;
+    $headers = 'From: '.$name. ' <' . $contact_email_from . '>' . PHP_EOL;
     $headers .= 'Reply-To: ' . $email . PHP_EOL;
     $headers .= 'MIME-Version: 1.0' . PHP_EOL;
     $headers .= 'Content-Type: text/html; charset=UTF-8' . PHP_EOL;
