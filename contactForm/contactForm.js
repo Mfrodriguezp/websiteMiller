@@ -19,10 +19,6 @@ $(document).ready(function () {
                 $("#success").addClass('show');
                 $("#success").removeClass('d-none');
                 $("#success").html('Se han recibido los datos de forma satisfactoria<br><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>');
-                name.val('');
-                email.val('');
-                subject.val('');
-                message.val('');
             } else {
                 $("#success").addClass('d-none');
                 $("#success").removeClass('show');
