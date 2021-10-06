@@ -1,5 +1,7 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+
 /*Correo a enviar*/
 $contact_email_to = 'miller.rodriguez@millerrodriguezweb.com.co';
 
@@ -12,18 +14,12 @@ $message_title = "Message:";
 if (!$contact_email_to || $contact_email_to == 'contact@example.com') {
     die('The contact form receiving email address is not configured!');
 }
-if (!isset($contact_email_from)) {
-    $contact_email_from = "contacto@" . @preg_replace('/^www\./', '', $_SERVER['SERVER_NAME']);
-}
-
-
-
 if (isset($_POST)) {
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
     $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-    if (strlen($name) <= 3) {
+    if (strlen($name) < 3) {
         die("El campo <strong> Nombre</strong> tiene menos de 3 caracteres o se encuentra vacío");
     }
     if (!($email)) {
@@ -35,21 +31,31 @@ if (isset($_POST)) {
     if (strlen($message) < 3) {
         die("El campo <strong>Mensaje</strong> tiene menos de 3 caracteres se encuentra vacío");
     }
+    
+require '../vendor/autoload.php';
 
-    $headers = 'From: '.$name. ' <' . $contact_email_from . '>' . PHP_EOL;
-    $headers .= 'Reply-To: ' . $email . PHP_EOL;
-    $headers .= 'MIME-Version: 1.0' . PHP_EOL;
-    $headers .= 'Content-Type: text/html; charset=UTF-8' . PHP_EOL;
-    $headers .= 'X-Mailer: PHP/' . phpversion();
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->isHTML(true);
+$mail->SMTPDebug = 0;
+$mail->Host = 'smtp.hostinger.com';
+$mail->Port = 587;
+$mail->SMTPAuth = true;
+$mail->Username = 'contacto@millerrodriguezweb.com.co';
+$mail->Password = 'Contacto2021*';
+$mail->setFrom('contacto@millerrodriguezweb.com.co', 'Contacto Formulario');
+$mail->addReplyTo('contacto@millerrodriguezweb.com.co', 'Contacto Formulario');
+$mail->addAddress($contact_email_to, 'Miller Rodriguez');
+$mail->Subject = $subject;
+$message_content = '<strong>' . $name_title . '</strong> ' . $name . '<br>';
+$message_content .= '<strong>' . $email_title . '</strong> ' . $email . '<br>';
+$message_content .= '<strong>' . $message_title . '</strong> ' . nl2br($message);
+$mail->Body=$message_content;
 
-    $message_content = '<strong>' . $name_title . '</strong> ' . $name . '<br>';
-    $message_content .= '<strong>' . $email_title . '</strong> ' . $email . '<br>';
-    $message_content .= '<strong>' . $message_title . '</strong> ' . nl2br($message);
-
-    $sendemail = mail($contact_email_to, $subject_title . ' ' . $subject, $message_content, $headers);
-    if ($sendemail) {
+    if ($mail->send()) {
         echo 'OK';
     } else {
-        echo 'Could not send mail! Please check your PHP mail configuration.';
+        echo 'Could not send mail! Please check your PHP mail configuration.'.$mail->ErrorInfo;
     }
 }
+?>
