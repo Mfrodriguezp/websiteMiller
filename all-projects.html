@@ -39,18 +39,7 @@
                         <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a data-scroll class="nav-link" href="index.html#skills">SKILLS</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            PROYECTOS
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a data-scroll class="dropdown-item" href="index.html#last-projects">ULTIMOS
-                                    PROYECTOS</a></li>
-                            <li><a class="dropdown-item" href="all-projects.html">TODOS LOS PROYECTOS</a></li>
-                        </ul>
+                        <a data-scroll class="nav-link" href="index.html#skills">PROYECTOS</a>
                     </li>
                     <li class="nav-item">
                         <a data-scroll class="nav-link" href="index.html#contact-me">CONTACTO</a>
@@ -75,7 +64,7 @@
         <section id="all-projects" class="all-projects">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a data-scroll href="#header">Inicio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Todos los Proyectos</li>
                 </ol>
             </nav>
@@ -83,43 +72,47 @@
                 <h3 class="text-center">TODOS LOS PROYECTOS</h3>
                 <div class="row">
                     <div class="card col-12 col-md-3">
-                        <img src="img/formAdeurMedical.png" class="card-img-top" alt="...">
+                        <img src="img/formAdeurMedical.png" class="card-img-top" alt="formAdeurMedical">
                         <div class="card-body">
                             <h5 class="card-title">Formulario Adeur</h5>
                             <p class="card-text">
                                 Implementación de Formulario de contacto con PHP.
                             </p>
-                            <button type="button" class="btn btn-card card-link" data-bs-toggle="modal" data-bs-target="#formularioAdeur">Mas info.</button>
+                            <button type="button" class="btn btn-card card-link" data-bs-toggle="modal"
+                                data-bs-target="#formularioAdeur">Mas info.</button>
                         </div>
                     </div>
                     <div class="card col-12 col-md-3">
-                        <img src="img/proyectoVCS.png" class="card-img-top" alt="...">
+                        <img src="img/proyectoVCS.png" class="card-img-top" alt="proyectoVCS">
                         <div class="card-body">
                             <h5 class="card-title">Página web VCS</h5>
                             <p class="card-text">
                                 Creación de Website con Bootstrap, Jquery y PHP.
                             </p>
-                            <button type="button" class="btn btn-card card-link" data-bs-toggle="modal" data-bs-target="#paginaVCS">Mas info.</button>
+                            <button type="button" class="btn btn-card card-link" data-bs-toggle="modal"
+                                data-bs-target="#paginaVCS">Mas info.</button>
                         </div>
                     </div>
                     <div class="card col-12 col-md-3">
-                        <img src="img/moodle_VCS.jpg" class="card-img-top" alt="...">
+                        <img src="img/moodle_VCS.jpg" class="card-img-top" alt="moodle_VCS">
                         <div class="card-body">
                             <h5 class="card-title">Implementación Moodle VCS</h5>
                             <p class="card-text">
                                 Implementación de escuela de capacitación interna usando CMS Moodle.
                             </p>
-                            <button type="button" class="btn btn-card card-link" data-bs-toggle="modal" data-bs-target="#moodleVCS">Mas info.</button>
+                            <button type="button" class="btn btn-card card-link" data-bs-toggle="modal"
+                                data-bs-target="#moodleVCS">Mas info.</button>
                         </div>
                     </div>
                     <div class="card col-12 col-md-3">
-                        <img src="img/project_reloj_javascript.png" class="card-img-top" alt="...">
+                        <img src="img/project_reloj_javascript.png" class="card-img-top" alt="relojJs">
                         <div class="card-body">
                             <h5 class="card-title">Reloj con Javascript</h5>
                             <p class="card-text">
                                 Creación de reloj en tiempo real usando Vanila Javascript, HTML5 y CSS3.
                             </p>
-                            <button type="button" class="btn btn-card card-link" data-bs-toggle="modal" data-bs-target="#relojJs">Mas info.</button>
+                            <button type="button" class="btn btn-card card-link" data-bs-toggle="modal"
+                                data-bs-target="#relojJs">Mas info.</button>
                         </div>
                     </div>
                 </div>
@@ -128,70 +121,178 @@
             <div class="modal fade" id="formularioAdeur" tabindex="-1" aria-labelledby="formularioAdeur"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="">Formulario Adeur</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class=" modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Formulario Adeur</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <img class="imgModal" src="img/formAdeurMedical.png" alt="formAdeurMedical">
                         </div>
-                        <div class="modal-body">
-                            ...
+                        <div class="container content my-3">
+                            <article>
+                                <h6>Objetivo del proyecto</h6>
+                                <p>
+                                    Crear funcionoalidad del formulario de contacto de la página web de Adeur Medial en
+                                    México.
+                                </p>
+                            </article>
+                            <article>
+                                <h6>Tecnologías utilizadas</h6>
+                                <ul>
+                                    <li>PHP</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h6>Cliente</h6>
+                                <p>Adrian Rosas</p>
+                            </article>
+                            <article>
+                                <h6>Página web Adeur Medical</h6>
+                                <a target="_blank" href="https://adeurmedicalimaging.com.mx/#contact">Sección Formulario</a>
+                            </article>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="paginaVCS" tabindex="-1" aria-labelledby="paginaVCS"
-                aria-hidden="true">
+            </div>
+            <div class="modal fade" id="paginaVCS" tabindex="-1" aria-labelledby="paginaVCS" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="">Página Web VCS</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class=" modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Página Web VCS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <img class="imgModal" src="img/proyectoVCS.png" alt="pagina Web VCS">
                         </div>
-                        <div class="modal-body">
-                            ...
+                        <div class="container content my-3">
+                            <article>
+                                <h6>Objetivo del proyecto</h6>
+                                <p>
+                                    Creación de página estática de la compañía VCS Consorcio Tecnológico S.A.S para
+                                    presencia en internet, donde se promueven los productos y servicios que brinda esta
+                                    compañía.
+                                </p>
+                            </article>
+                            <article>
+                                <h6>Tecnologías utilizadas</h6>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>PHP</li>
+                                    <li>Bootstrap</li>
+                                    <li>Jquery</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h6>Cliente</h6>
+                                <p>VCS Consorcio Tecnológico S.A.S</p>
+                            </article>
+                            <article>
+                                <h6>Página web VCS CONSORCIO TECNOLOGICO S.A.S</h6>
+                                <a target="_blank" href="https://vcs.com.co">Página web desarrollada</a>
+                            </article>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="moodleVCS" tabindex="-1" aria-labelledby="moodleVCS"
-                aria-hidden="true">
+            </div>
+            <div class="modal fade" id="moodleVCS" tabindex="-1" aria-labelledby="moodleVCS" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="">Implementación Moodle VCS</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class=" modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Implementación Moodle VCS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <img class="imgModal" src="img/moodle_VCS.jpg" alt="Escuela de Formación VCS">
                         </div>
-                        <div class="modal-body">
-                            ...
+                        <div class="container content my-3">
+                            <article>
+                                <h6>Objetivo del proyecto</h6>
+                                <p>
+                                    Creación de plataforma de capacitación para colaboradores internos de la compañía
+                                    que permitan el fácil acceso de información vital para la ejecución y manejo de las
+                                    diversas plataformas.
+                                </p>
+                            </article>
+                            <article>
+                                <h6>Tecnologías utilizadas</h6>
+                                <ul>
+                                    <li>CMS Moodle</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h6>Cliente</h6>
+                                <p>VCS Consorcio Tecnológico S.A.S</p>
+                            </article>
+                            <article>
+                                <h6>Moodle Escuela de Formación VCS</h6>
+                                <a target="_blank" href="https://vcs.com.co/escuelaFormacion">Plataforma de capacitación interna VCS</a>
+                            </article>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="relojJs" tabindex="-1" aria-labelledby="relojJs"
-                aria-hidden="true">
+            </div>
+            <div class="modal fade" id="relojJs" tabindex="-1" aria-labelledby="relojJs" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="">Reloj JS</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class=" modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Reloj JS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <img class="imgModal" src="img/project_reloj_javascript.png" alt="reloj Javascript">
                         </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <div class="container content my-3">
+                            <article>
+                                <h6>Objetivo del proyecto</h6>
+                                <p>
+                                    Creación de reloj en tiempo real haciendo uso de funciones nativas de Javascript
+                                    como setTimeOut(), entre otras. Se implementa de forma responsive para diferentes
+                                    dispositivos.
+                                </p>
+                            </article>
+                            <article>
+                                <h6>Tecnologías utilizadas</h6>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>Javascript</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h6>Tipo de proyecto</h6>
+                                <p>Proyecto Personal</p>
+                            </article>
+                            <article>
+                                <h6>Visualización Reloj Javascript</h6>
+                                <a target="_blank" href="https://mfrodriguezp.github.io/javascriptClocks/">Página Reloj Javascript</a><br>
+                                <a target="_blank" href="https://github.com/Mfrodriguezp/javascriptClocks">Repositorio Proyecto</a>
+                            </article>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
+            </div>
             </div>
             <!--Modals-->
         </section>
